@@ -18,9 +18,11 @@ router.get('/:id', async (req, res) => {
 
 router.post('/', async (req, res) => {
   const schema = {
-    name: 'string',
+    nama: 'string',
     brand: 'string',
-    description: { type: 'string', optional: true }
+    harga: 'number',
+
+   //  description: { type: 'string', optional: true }
   }
 
   const validate = v.validate(req.body, schema);
@@ -28,7 +30,6 @@ router.post('/', async (req, res) => {
   if (validate.length) {
     return res.status(400).json(validate);
   }
-
 //   res.send('Selamat data yang anda masukan benar');
 
 const product = await Product.create(req.body);
@@ -44,9 +45,10 @@ router.put('/:id', async (req, res) => {
    }
 
    const schema = {
-      name: 'string',
+      nama: 'string',
       brand: 'string',
-      description: { type: 'string', optional: true }
+      harga: 'number',
+      // description: { type: 'string', optional: true }
    }
    const validate = v.validate(req.body, schema);
 

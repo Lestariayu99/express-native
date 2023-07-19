@@ -15,17 +15,12 @@ module.exports = (sequelize, DataTypes) => {
           type: DataTypes.STRING,
           allowNull: false
          },
-         description: {
-          type: DataTypes.TEXT,
-         },
-         createdAt: {
-          type: DataTypes.DATE,
+         harga: {
+          type: DataTypes.NUMBER,
           allowNull: false
+
          },
-         updatedAt: {
-          type: DataTypes.DATE,
-          allowNull: false
-         }
+        
         }, {
 
         tableName: 'product'
