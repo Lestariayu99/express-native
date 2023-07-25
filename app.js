@@ -27,6 +27,6 @@ module.exports = app;
 
 
 // untuk menjalankan apk ini: npm start 
-// untuk melihat koneksi dbs node confi\mongodb.js
+// untuk melihat koneksi dbs node config\mongodb.js
 
 
